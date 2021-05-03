@@ -130,3 +130,10 @@ tensor([[ 3, 19,  5,  2, 23],
 
 - It is dangerous that when the model is wrong, the probability is also very high (nearly 1.0).
 
+#### important suggestions from reviewer
+
+- For further improvements, here are some preprocessing techniques that have proven to work on this dataset:
+  1. Convertion to grayscale can also help.
+  2. Try [Augmenting](https://github.com/aleju/imgaug) your training dataset with rotation, distortion, scaling ,translation  and cropping images with varied contrast/brightness or normalized  histograms) can improve the robustness of the model and give better  results
+  3. If images are not very bright, can do pre-processing like [histogram equalization](http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html) help in enhancing.
+
